@@ -159,7 +159,8 @@
 				
 		}
 		
-		if (! options.autoclose) {
+
+		if (options.donetext) {
 			// If autoclose is not setted, append a button
 			$('<button type="button" class="btn btn-sm btn-default btn-block clockpicker-button">' + options.donetext + '</button>')
 				.click($.proxy(this.done, this))
