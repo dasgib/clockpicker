@@ -524,6 +524,10 @@
 			nextView = isHours ? this.hoursView : this.minutesView,
 			hideView = isHours ? this.minutesView : this.hoursView;
 
+    if (! isHours) {
+    	this.input[0].value = leadingZero(this.hours) + ':' + leadingZero(this.minutes);
+    }
+
 		this.currentView = view;
 
 		this.spanHours.toggleClass('text-primary', isHours);
